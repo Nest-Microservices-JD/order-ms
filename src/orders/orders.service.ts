@@ -47,7 +47,7 @@ export class OrdersService {
 
       return this.mapperResponseOrder(orderCreated, productsFound);
     } catch (error) {
-      throw new RpcException(error as unknown as object);
+      throw new RpcException(error as object);
     }
   }
 

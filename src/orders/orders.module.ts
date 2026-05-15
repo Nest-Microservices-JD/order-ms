@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ClientsModule, Transport } from '@nestjs/microservices';
-import { envs, NATS_SERVICE } from '../config';
 import { PrismaService } from '../prisma.service';
+import { NatsModule } from '../transports/nats.module';
 import { OrdersController } from './orders.controller';
 import { OrdersService } from './orders.service';
-import { NatsModule } from '../transports/nats.module';
 
 @Module({
   controllers: [OrdersController],
